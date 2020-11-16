@@ -17,6 +17,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 600px;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
 /* ===== End StudentContainer.js ===== */
@@ -35,12 +37,12 @@
 .student-card {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #f9f9f9;
+  border-bottom: 1px solid #c7c7c7;
 }
 
 .student-card-container {
   display: flex;
-  padding: 16px 24px;
+  padding: 20px 24px;
 }
 
 .student-card-image-container {
@@ -53,6 +55,10 @@
 
 .student-card-details-name {
   font-size: 3rem;
+}
+
+.student-card-details-text {
+  font-size: 1.6rem;
 }
 
 /* ===== End StudentCard.js ===== */
