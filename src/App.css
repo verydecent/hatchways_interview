@@ -11,10 +11,24 @@
 .student-card {
   width: 100%;
   height: auto;
+  border-bottom: 1px solid #f9f9f9;
 }
 
-.student-container-container {
+.student-card-container {
+  display: flex;
   padding: 16px 24px;
+}
+
+.student-card-image-container {
+  height: 100%;
+}
+
+.student-card-image-container img {
+  width: 100px;
+}
+
+.student-card-details-name {
+  font-size: 1.6rem;
 }
 
 /* ===== End StudentCard.js ===== */
