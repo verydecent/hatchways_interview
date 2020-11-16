@@ -7,7 +7,7 @@ const StudentList = ({ students, searchText }) => {
     students &&
     students.filter((student) => {
       const fullName = student.firstName + " " + student.lastName;
-      return fullName.indexOf(searchText) !== -1;
+      return fullName.toLowerCase().indexOf(searchText) !== -1;
     });
 
   const list =
