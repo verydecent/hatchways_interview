@@ -2,10 +2,17 @@ import React from "react";
 import StudentCard from "./StudentCard";
 import findGradeAverage from "../helpers/findGradeAverage";
 
-const StudentList = ({ students }) => {
-  const list =
+const StudentList = ({ students, searchText }) => {
+  const filteredStudents =
     students &&
-    students.map((student) => {
+    students.filter((student) => {
+      const fullName = student.firstName + " " + student.lastName;
+      return fullName.indexOf(searchText) !== -1;
+    });
+
+  const list =
+    filteredStudents &&
+    filteredStudents.map((student) => {
       const {
         pic,
         firstName,

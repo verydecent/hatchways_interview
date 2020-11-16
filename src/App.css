@@ -17,6 +17,7 @@
   height: 400px;
   border-radius: 5px;
   overflow-y: scroll;
+  background-color: #ffffff;
 }
 
 /* ===== SearchBar.js ===== */

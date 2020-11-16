@@ -7,9 +7,15 @@ class StudentContainer extends React.Component {
   constructor() {
     super();
     this.state = {
+      searchText: "",
       students: [],
     };
   }
+
+  onChange = (e) => {
+    console.log(e.target.value);
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   componentDidMount() {
     ax.get("/students")
@@ -26,8 +32,14 @@ class StudentContainer extends React.Component {
   render() {
     return (
       <div className="student-container">
-        <SearchBar />
-        <StudentList students={this.state.students} />
+        <SearchBar
+          searchText={this.state.searchText}
+          onChange={this.onChange}
+        />
+        <StudentList
+          students={this.state.students}
+          searchText={this.state.searchText}
+        />
       </div>
     );
   }
