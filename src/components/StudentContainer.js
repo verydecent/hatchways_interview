@@ -1,5 +1,6 @@
 import React from "react";
 import ax from "../helpers/axiosConfig";
+import StudentList from "./StudentList";
 
 class StudentContainer extends React.Component {
   constructor() {
@@ -8,11 +9,21 @@ class StudentContainer extends React.Component {
   }
 
   componentDidMount() {
-    ax.get();
+    ax.get("/students")
+      .then((response) => {
+        console.log("RESPONSE", response);
+      })
+      .catch((error) => {
+        console.log("ERROR", error);
+      });
   }
 
   render() {
-    return <div>Student Container</div>;
+    return (
+      <div>
+        <StudentList />
+      </div>
+    );
   }
 }
 

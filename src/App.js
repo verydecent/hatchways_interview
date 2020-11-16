@@ -1,11 +1,11 @@
 import "./App.css";
-import StudentList from "./components/StudentList";
+import StudentContainer from "./components/StudentContainer";
 
 function App() {
   return (
     <div className="App">
       <div>
-        <StudentList />
+        <StudentContainer />
       </div>
     </div>
   );
