@@ -6,9 +6,18 @@ const StudentList = ({ students }) => {
   const list =
     students &&
     students.map((student) => {
-      const { firstName, lastName, email, company, skill, grades } = student;
+      const {
+        pic,
+        firstName,
+        lastName,
+        email,
+        company,
+        skill,
+        grades,
+      } = student;
       return (
         <StudentCard
+          pic={pic}
           firstName={firstName}
           lastName={lastName}
           email={email}

@@ -1,6 +1,7 @@
 import React from "react";
 
 const StudentCard = ({
+  pic,
   firstName,
   lastName,
   email,
