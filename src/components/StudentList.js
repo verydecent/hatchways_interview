@@ -1,11 +1,22 @@
 import React from "react";
+import StudentCard from "./StudentCard";
 
 const StudentList = ({ students }) => {
   const list =
     students &&
     students.map((student) => {
+      const { firstName, lastName, email, company, skill, grades } = student;
       console.log("student from map", student);
-      return <div>student 1</div>;
+      return (
+        <StudentCard
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
+          company={company}
+          skill={skill}
+          grades={grades}
+        />
+      );
     });
 
   return (
