@@ -1,4 +1,5 @@
 import React from "react";
+import ax from "../helpers/axiosConfig";
 
 class StudentContainer extends React.Component {
   constructor() {
@@ -7,7 +8,7 @@ class StudentContainer extends React.Component {
   }
 
   componentDidMount() {
-    // Axios.get()
+    ax.get();
   }
 
   render() {
