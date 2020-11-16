@@ -5,13 +5,17 @@ import StudentList from "./StudentList";
 class StudentContainer extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      students: [],
+    };
   }
 
   componentDidMount() {
     ax.get("/students")
       .then((response) => {
         console.log("RESPONSE", response);
+        const { students } = response.data;
+        this.setState({ students });
       })
       .catch((error) => {
         console.log("ERROR", error);
@@ -21,7 +25,7 @@ class StudentContainer extends React.Component {
   render() {
     return (
       <div>
-        <StudentList />
+        <StudentList students={this.state.students} />
       </div>
     );
   }
