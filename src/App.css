@@ -1,10 +1,33 @@
 /* ===== Start App.js ===== */
 
-.app {
+.App {
   background-color: #f0f0f0;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* ===== End App.js ===== */
+
+/* ===== Start StudentContainer.js ===== */
+
+.student-container {
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+}
+
+/* ===== End StudentContainer.js ===== */
+
+/* ===== Start StudentList.js ===== */
+
+.student-list {
+  height: 100%;
+}
+
+/* ===== End StudentList.js ===== */
 
 /* ===== Start StudentCard.js ===== */
 
@@ -28,7 +51,7 @@
 }
 
 .student-card-details-name {
-  font-size: 1.6rem;
+  font-size: 3rem;
 }
 
 /* ===== End StudentCard.js ===== */
