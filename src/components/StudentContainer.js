@@ -1,5 +1,6 @@
 import React from "react";
 import ax from "../helpers/axiosConfig";
+import SearchBar from "./SearchBar";
 import StudentList from "./StudentList";
 
 class StudentContainer extends React.Component {
@@ -25,6 +26,7 @@ class StudentContainer extends React.Component {
   render() {
     return (
       <div className="student-container">
+        <SearchBar />
         <StudentList students={this.state.students} />
       </div>
     );
