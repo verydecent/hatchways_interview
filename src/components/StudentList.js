@@ -9,7 +9,7 @@ const StudentList = ({ students }) => {
       return <div>student 1</div>;
     });
 
-  return { list };
+  return list;
 };
 
 export default StudentList;
