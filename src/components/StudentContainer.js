@@ -24,7 +24,7 @@ class StudentContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="student-container">
         <StudentList students={this.state.students} />
       </div>
     );

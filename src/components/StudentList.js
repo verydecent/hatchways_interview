@@ -19,7 +19,7 @@ const StudentList = ({ students }) => {
       );
     });
 
-  return <div>{list}</div>;
+  return <div className="student-list">{list}</div>;
 };
 
 export default StudentList;
