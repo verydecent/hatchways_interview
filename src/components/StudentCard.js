@@ -8,7 +8,7 @@ const StudentCard = ({
   skill,
   averageGrade,
 }) => {
-  return <div className="student-card">{firstName}</div>;
+  return <div className="student-card">{averageGrade}</div>;
 };
 
 export default StudentCard;

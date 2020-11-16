@@ -7,7 +7,6 @@ const StudentList = ({ students }) => {
     students &&
     students.map((student) => {
       const { firstName, lastName, email, company, skill, grades } = student;
-      findGradeAverage(grades);
       return (
         <StudentCard
           firstName={firstName}
@@ -15,7 +14,7 @@ const StudentList = ({ students }) => {
           email={email}
           company={company}
           skill={skill}
-          grades={grades}
+          averageGrade={findGradeAverage(grades)}
         />
       );
     });
