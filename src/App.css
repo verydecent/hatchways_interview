@@ -10,7 +10,7 @@
 
 .student-card {
   width: 100%;
-  height: 120px;
+  height: auto;
 }
 
 .student-container-container {
