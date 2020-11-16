@@ -13,7 +13,7 @@ const StudentCard = ({
     <div className="student-card">
       <div className="student-card-container">
         <div className="student-card-image-container">
-          <img src={""} alt="" />
+          <img src={pic} alt="" />
         </div>
         <div className="student-card-deatils-container">
           <h1 className="student-card-details-name">
