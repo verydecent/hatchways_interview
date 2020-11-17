@@ -15,14 +15,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 600px;
-  border-radius: 5px;
-  overflow-y: scroll;
+  border-radius: 8px;
   background-color: #ffffff;
+  overflow-y: scroll;
+}
+
+.student-inner-container {
 }
 
 /* ===== SearchBar.js ===== */
 
 .searchbar-container {
+  border-radius: 8px 8px 0 0;
   position: sticky;
   top: 0;
   width: 100%;
