@@ -30,9 +30,25 @@ class StudentContainer extends React.Component {
     this.setState({ [e.target.name]: e.target.value.toLowerCase() });
   };
 
-  submitTag = (e, id, text) => {
+  submitTag = (e, id, tagText) => {
     e.preventDefault();
-    console.log("e", e);
+    const immutableArr = this.state.students.map((student) => {
+      if (student.id === id) {
+        if (student.tags) {
+          student.tags.push(tagText);
+        } else {
+          student.tags = [];
+          student.tags.push(tagText);
+        }
+      }
+      return student;
+    });
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        students: immutableArr,
+      };
+    });
   };
 
   toggleStudentCard = (id) => {
