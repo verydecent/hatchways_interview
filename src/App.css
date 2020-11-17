@@ -89,8 +89,6 @@
 }
 
 .student-card-details-button {
-  font-size: 4rem;
-  font-weight: 700;
 }
 
 .student-card-details-name {
@@ -116,4 +114,18 @@
 
 .student-card-bottom.show {
   display: block;
+}
+
+/* ===== Button.js ===== */
+
+.button {
+  border: none;
+  background: none;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+  color: #c7c7c7;
+  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 700;
 }
