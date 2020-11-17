@@ -28,11 +28,14 @@ const StudentList = ({
         company,
         skill,
         grades,
+        tags,
       } = student;
 
       return (
         <StudentCard
+          // Key
           key={index}
+          // Values
           isOpen={openStudentCards.includes(id)}
           id={id}
           pic={pic}
@@ -43,6 +46,8 @@ const StudentList = ({
           skill={skill}
           averageGrade={findGradeAverage(grades)}
           grades={grades}
+          tags={tags}
+          // Methods
           toggleStudentCard={toggleStudentCard}
           submitTag={submitTag}
         />

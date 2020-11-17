@@ -147,6 +147,12 @@
   border-bottom: 1px solid #000000;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 /* ===== Button.js ===== */
 
 .button {

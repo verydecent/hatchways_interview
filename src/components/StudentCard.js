@@ -3,6 +3,7 @@ import Button from "./Button";
 import TagContainer from "./TagContainer";
 
 const StudentCard = ({
+  // Values
   isOpen,
   id,
   pic,
@@ -13,6 +14,8 @@ const StudentCard = ({
   skill,
   averageGrade,
   grades,
+  tags,
+  // Methods
   toggleStudentCard,
   submitTag,
 }) => {
@@ -65,7 +68,7 @@ const StudentCard = ({
             <div className="grades-list">{mappedGrades}</div>
           </div>
           {/* Tags section */}
-          <TagContainer id={id} submitTag={submitTag} />
+          <TagContainer id={id} tags={tags} submitTag={submitTag} />
         </div>
       </div>
     </div>
