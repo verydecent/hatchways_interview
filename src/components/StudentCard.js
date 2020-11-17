@@ -32,10 +32,13 @@ const StudentCard = ({
   return (
     <div className="student-card">
       <div className="student-card-container">
+        {/* Image Container */}
         <div className="student-card-image-container">
           <img src={pic} alt="hatchways robot" />
         </div>
+        {/* Details container */}
         <div className="student-card-details-container">
+          {/* Header section */}
           <div className="student-card-details-header">
             <h1 className="student-card-details-name">
               {firstName} {lastName}
@@ -46,6 +49,7 @@ const StudentCard = ({
               </Button>
             </div>
           </div>
+          {/* Details section */}
           <div className="student-card-details-text-container">
             <p className="student-card-details-text">Email: {email}</p>
             <p className="student-card-details-text">Company: {company}</p>
@@ -54,10 +58,15 @@ const StudentCard = ({
               Average: {averageGrade}%
             </p>
           </div>
+          {/* Expanding grades section */}
+          <div className={conditionalClassName}>
+            <div className="grades-list">{mappedGrades}</div>
+          </div>
+          {/* Tags section */}
+          <div className="tag-section">
+            <input placeholder="add a tag" className="tag-input" />
+          </div>
         </div>
-      </div>
-      <div className={conditionalClassName}>
-        <div className="grades-list">{mappedGrades}</div>
       </div>
     </div>
   );
