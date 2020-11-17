@@ -1,6 +1,7 @@
 import React from "react";
 
 const StudentCard = ({
+  isOpen,
   id,
   pic,
   firstName,
@@ -11,6 +12,9 @@ const StudentCard = ({
   averageGrade,
   toggleStudentCard,
 }) => {
+  const conditionalSymbol = isOpen ? "-" : "+";
+  const conditionalClassName = "";
+
   return (
     <div className="student-card">
       <div className="student-card-container">
@@ -23,7 +27,9 @@ const StudentCard = ({
               {firstName} {lastName}
             </h1>
             <div className="student-card-details-button">
-              <button onClick={() => toggleStudentCard(id, 10)}>+</button>
+              <button onClick={() => toggleStudentCard(id)}>
+                {conditionalSymbol}
+              </button>
             </div>
           </div>
           <div className="student-card-details-text-container">

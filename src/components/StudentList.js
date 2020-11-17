@@ -29,6 +29,8 @@ const StudentList = ({
         grades,
       } = student;
 
+      console.log("openstudentCards", openStudentCards);
+      console.log("====> id", typeof id);
       return (
         <StudentCard
           key={index}
