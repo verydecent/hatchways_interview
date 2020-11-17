@@ -59,7 +59,9 @@ class StudentContainer extends React.Component {
         <div className="student-container">
           <div className="searchbar-container">
             <SearchBar
-              searchText={this.state.searchText}
+              name="searchText"
+              value={this.state.searchText}
+              placeholder="Search by name"
               onChange={this.onChange}
             />
             <SearchBar
