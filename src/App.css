@@ -40,6 +40,10 @@
   font-size: 1.8rem;
 }
 
+.searchbar-input:focus {
+  border-bottom: 1px solid #000000;
+}
+
 /* ===== StudentList.js ===== */
 
 .student-list {
