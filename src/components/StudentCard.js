@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const StudentCard = ({
   isOpen,
@@ -27,9 +28,9 @@ const StudentCard = ({
               {firstName} {lastName}
             </h1>
             <div className="student-card-details-button">
-              <button onClick={() => toggleStudentCard(id)}>
+              <Button onClick={() => toggleStudentCard(id)}>
                 {conditionalSymbol}
-              </button>
+              </Button>
             </div>
           </div>
           <div className="student-card-details-text-container">
