@@ -22,7 +22,9 @@ const StudentCard = ({
             <h1 className="student-card-details-name">
               {firstName} {lastName}
             </h1>
-            <div className="student-card-details-button">+</div>
+            <div className="student-card-details-button">
+              <button onClick={() => toggleStudentCard(id)}>+</button>
+            </div>
           </div>
           <div className="student-card-details-text-container">
             <p className="student-card-details-text">Email: {email}</p>
@@ -32,11 +34,7 @@ const StudentCard = ({
           </div>
         </div>
       </div>
-      <div className="student-card-bottom-container">
-        <button onClick={() => toggleStudentCard(id)}>
-          Bottom Display None
-        </button>
-      </div>
+      <div className="student-card-bottom-container">Bottom Display None</div>
     </div>
   );
 };

@@ -29,7 +29,7 @@ class StudentContainer extends React.Component {
     this.setState({ [e.target.name]: e.target.value.toLowerCase() });
   };
 
-  toggleStudentCard(id) {
+  toggleStudentCard = (id) => {
     console.log("toggleStudentCard", id);
     if (this.state.openStudentCards.includes(id)) {
       // Remove
@@ -46,7 +46,7 @@ class StudentContainer extends React.Component {
       // Add
       this.state.openStudentCards.push(id);
     }
-  }
+  };
 
   render() {
     return (
