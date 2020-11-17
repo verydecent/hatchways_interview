@@ -41,14 +41,7 @@ class StudentContainer extends React.Component {
   submitTag = (e, id, tagText) => {
     e.preventDefault();
     const immutableArr = this.state.students.map((student) => {
-      if (student.id === id) {
-        if (student.tags) {
-          student.tags.push(tagText);
-        } else {
-          student.tags = [];
-          student.tags.push(tagText);
-        }
-      }
+      if (student.id === id) student.tags.push(tagText);
       return student;
     });
     this.setState((prevState) => {
