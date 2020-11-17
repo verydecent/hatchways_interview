@@ -15,10 +15,13 @@ const StudentCard = ({
         <div className="student-card-image-container">
           <img src={pic} alt="" />
         </div>
-        <div className="student-card-deatils-container">
-          <h1 className="student-card-details-name">
-            {firstName} {lastName}
-          </h1>
+        <div className="student-card-details-container">
+          <div className="student-card-details-header">
+            <h1 className="student-card-details-name">
+              {firstName} {lastName}
+            </h1>
+            <div className="student-card-details-button">+</div>
+          </div>
           <div className="student-card-details-text-container">
             <p className="student-card-details-text">Email: {email}</p>
             <p className="student-card-details-text">Company: {company}</p>
@@ -27,6 +30,7 @@ const StudentCard = ({
           </div>
         </div>
       </div>
+      <div className="student-card-buttom-container">Bottom Display None</div>
     </div>
   );
 };
