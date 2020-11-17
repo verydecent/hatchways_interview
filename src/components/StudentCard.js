@@ -11,6 +11,7 @@ const StudentCard = ({
   company,
   skill,
   averageGrade,
+  grades,
   toggleStudentCard,
 }) => {
   const conditionalSymbol = isOpen ? "-" : "+";
@@ -22,7 +23,7 @@ const StudentCard = ({
     <div className="student-card">
       <div className="student-card-container">
         <div className="student-card-image-container">
-          <img src={pic} alt="" />
+          <img src={pic} alt="hatchways robot" />
         </div>
         <div className="student-card-details-container">
           <div className="student-card-details-header">

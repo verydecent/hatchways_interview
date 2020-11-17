@@ -41,6 +41,7 @@ const StudentList = ({
           company={company}
           skill={skill}
           averageGrade={findGradeAverage(grades)}
+          grades={grades}
           toggleStudentCard={toggleStudentCard}
         />
       );
