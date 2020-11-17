@@ -23,7 +23,9 @@ const StudentCard = ({
               {firstName} {lastName}
             </h1>
             <div className="student-card-details-button">
-              <button onClick={() => toggleStudentCard(id)}>+</button>
+              <button onClick={() => toggleStudentCard(parseInt(id, 10))}>
+                +
+              </button>
             </div>
           </div>
           <div className="student-card-details-text-container">
