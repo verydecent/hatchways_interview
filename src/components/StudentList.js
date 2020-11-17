@@ -2,7 +2,12 @@ import React from "react";
 import StudentCard from "./StudentCard";
 import findGradeAverage from "../helpers/findGradeAverage";
 
-const StudentList = ({ students, searchText, toggleStudentCard }) => {
+const StudentList = ({
+  students,
+  searchText,
+  openStudentCards,
+  toggleStudentCard,
+}) => {
   const filteredStudents =
     students &&
     students.filter((student) => {
@@ -23,9 +28,11 @@ const StudentList = ({ students, searchText, toggleStudentCard }) => {
         skill,
         grades,
       } = student;
+
       return (
         <StudentCard
           key={index}
+          isOpen={openStudentCards.includes(id)}
           id={id}
           pic={pic}
           firstName={firstName}

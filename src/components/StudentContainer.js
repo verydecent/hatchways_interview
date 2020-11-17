@@ -30,10 +30,12 @@ class StudentContainer extends React.Component {
   };
 
   toggleStudentCard = (id) => {
-    if (this.state.openStudentCards.includes(id)) {
+    const intedId = parseInt(id, 10);
+
+    if (this.state.openStudentCards.includes(intedId)) {
       // Remove
       const immutableArr = this.state.openStudentCards.filter((cardId) => {
-        return cardId !== id;
+        return cardId !== intedId;
       });
 
       this.setState((prevState) => {
@@ -47,7 +49,7 @@ class StudentContainer extends React.Component {
       this.setState((prevState) => {
         return {
           ...prevState,
-          openStudentCards: [...prevState.openStudentCards, id],
+          openStudentCards: [...prevState.openStudentCards, intedId],
         };
       });
     }
@@ -64,6 +66,7 @@ class StudentContainer extends React.Component {
           students={this.state.students}
           searchText={this.state.searchText}
           toggleStudentCard={this.toggleStudentCard}
+          openStudentCards={this.state.openStudentCards}
         />
       </div>
     );
