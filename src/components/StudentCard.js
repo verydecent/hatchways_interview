@@ -1,15 +1,16 @@
 import React from "react";
-import Button from "./Button";
 import TagContainer from "./TagContainer";
 import StudentDetails from "./StudentDetails";
 import StudentGrades from "./StudentGrades";
+import StudentHeader from "./StudentHeader";
+import StudentImageContainer from "./StudentImageContainer";
 
 const StudentCard = ({
   // Values
   tagSearchText,
   isOpen,
   id,
-  pic,
+  picSrc,
   firstName,
   lastName,
   email,
@@ -22,10 +23,13 @@ const StudentCard = ({
   toggleStudentCard,
   submitTag,
 }) => {
-  const conditionalSymbol = isOpen ? "-" : "+";
   const conditionalClassName = isOpen
     ? "student-card-bottom-container show"
     : "student-card-bottom-container";
+  const tagConditionalClassName =
+    tags.includes(tagSearchText) || tagSearchText === ""
+      ? "student-card"
+      : "student-card hide";
   const mappedGrades =
     grades &&
     grades.map((grade, index) => {
@@ -39,44 +43,30 @@ const StudentCard = ({
     });
 
   return (
-    <div
-      className="student-card"
-      style={{
-        display:
-          tags.includes(tagSearchText) || tagSearchText === ""
-            ? "block"
-            : "none",
-      }}
-    >
+    <div className={tagConditionalClassName}>
       <div className="student-card-container">
         {/* Image Container */}
-        <div className="student-card-image-container">
-          <img src={pic} alt="hatchways robot" />
-        </div>
+        <StudentImageContainer picSrc={picSrc} />
         {/* Details container */}
         <div className="student-card-details-container">
           {/* Header section */}
-          <div className="student-card-details-header">
-            <h1 className="student-card-details-name">
-              {firstName} {lastName}
-            </h1>
-            <div className="student-card-details-button">
-              <Button onClick={() => toggleStudentCard(id)}>
-                {conditionalSymbol}
-              </Button>
-            </div>
-          </div>
+          <StudentHeader
+            id={id}
+            isOpen={isOpen}
+            fullName={`${firstName} ${lastName}`}
+            toggleStudentCard={toggleStudentCard}
+          />
           {/* Details section */}
           <StudentDetails
             email={email}
-            company={company}
             skill={skill}
+            company={company}
             averageGrade={averageGrade}
           />
           {/* Expanding grades section */}
           <StudentGrades
-            conditionalClassName={conditionalClassName}
             mappedGrades={mappedGrades}
+            conditionalClassName={conditionalClassName}
           />
           {/* Tags section */}
           <TagContainer id={id} tags={tags} submitTag={submitTag} />
