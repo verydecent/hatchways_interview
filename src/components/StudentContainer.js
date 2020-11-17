@@ -30,20 +30,18 @@ class StudentContainer extends React.Component {
   };
 
   toggleStudentCard = (id) => {
-    console.log(this.state.openStudentCards.includes(id));
     if (this.state.openStudentCards.includes(id)) {
       // Remove
-      const immutableArr = this.state.openStudentCards.filter(
-        (card) => card.id !== id
-      );
+      const immutableArr = this.state.openStudentCards.filter((cardId) => {
+        return cardId !== id;
+      });
 
-      console.log("imm", immutableArr);
       this.setState((prevState) => {
         return {
           ...prevState,
-          openStudentCards: immutableArray,
+          openStudentCards: immutableArr,
         };
-      }, console.log("what the fuck", this.state));
+      });
     } else {
       // Add
       this.setState((prevState) => {
