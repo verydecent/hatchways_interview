@@ -65,7 +65,7 @@ const StudentCard = ({
             <div className="grades-list">{mappedGrades}</div>
           </div>
           {/* Tags section */}
-          <TagContainer submitTag={submitTag} />
+          <TagContainer id={id} submitTag={submitTag} />
         </div>
       </div>
     </div>

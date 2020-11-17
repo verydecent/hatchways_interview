@@ -19,8 +19,8 @@ class TagContainer extends React.Component {
     return (
       <div className="tag-section">
         <form
-          onSubmit={() => {
-            this.props.submitTag();
+          onSubmit={(e) => {
+            this.props.submitTag(e, this.props.id, this.state.tagText);
             this.clearState();
           }}
         >
