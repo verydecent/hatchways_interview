@@ -19,14 +19,22 @@ class StudentContainer extends React.Component {
       .then((response) => {
         console.log("RESPONSE", response);
         const { students } = response.data;
-        this.setState({ students });
+        const studentsWithTagsArr = students.map((student) => {
+          student.tags = [];
+          return student;
+        });
+        this.setState({ students: studentsWithTagsArr });
       })
       .catch((error) => {
         console.log("ERROR", error);
       });
   }
 
-  onChange = (e) => {
+  nameOnChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value.toLowerCase() });
+  };
+
+  tagOnChange = (e) => {
     this.setState({ [e.target.name]: e.target.value.toLowerCase() });
   };
 
@@ -84,18 +92,19 @@ class StudentContainer extends React.Component {
               name="nameSearchText"
               value={this.state.nameSearchText}
               placeholder="Search by name"
-              onChange={this.onChange}
+              onChange={this.nameOnChange}
             />
             <SearchBar
-              name="tagText"
-              value={this.state.tagText}
+              name="tagSearchText"
+              value={this.state.tagSearchText}
               placeholder="Search by tag"
-              onChange={this.onChange}
+              onChange={this.tagOnChange}
             />
           </div>
           <StudentList
             students={this.state.students}
             nameSearchText={this.state.nameSearchText}
+            tagSearchText={this.state.tagSearchText}
             toggleStudentCard={this.toggleStudentCard}
             openStudentCards={this.state.openStudentCards}
             submitTag={this.submitTag}
