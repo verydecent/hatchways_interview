@@ -9,13 +9,9 @@ class StudentContainer extends React.Component {
     this.state = {
       searchText: "",
       students: [],
+      openStudentCards: [],
     };
   }
-
-  onChange = (e) => {
-    console.log(e.target.value);
-    this.setState({ [e.target.name]: e.target.value.toLowerCase() });
-  };
 
   componentDidMount() {
     ax.get("/students")
@@ -27,6 +23,29 @@ class StudentContainer extends React.Component {
       .catch((error) => {
         console.log("ERROR", error);
       });
+  }
+
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value.toLowerCase() });
+  };
+
+  toggleStudentCard(id) {
+    console.log("toggleStudentCard", id);
+    if (this.state.openStudentCards.includes(id)) {
+      // Remove
+      const immutableArray = this.state.openStudentCards.filter(
+        (card) => card.id !== id
+      );
+      this.setState((prevState) => {
+        return {
+          ...prevState,
+          openStudentCards: immutableArray,
+        };
+      });
+    } else {
+      // Add
+      this.state.openStudentCards.push(id);
+    }
   }
 
   render() {
