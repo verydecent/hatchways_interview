@@ -2,7 +2,7 @@ import React from "react";
 import StudentCard from "./StudentCard";
 import findGradeAverage from "../helpers/findGradeAverage";
 
-const StudentList = ({ students, searchText }) => {
+const StudentList = ({ students, searchText, toggleStudentCard }) => {
   const filteredStudents =
     students &&
     students.filter((student) => {
@@ -12,7 +12,7 @@ const StudentList = ({ students, searchText }) => {
 
   const list =
     filteredStudents &&
-    filteredStudents.map((student) => {
+    filteredStudents.map((student, index) => {
       const {
         id,
         pic,
@@ -25,6 +25,7 @@ const StudentList = ({ students, searchText }) => {
       } = student;
       return (
         <StudentCard
+          key={index}
           id={id}
           pic={pic}
           firstName={firstName}
@@ -33,6 +34,7 @@ const StudentList = ({ students, searchText }) => {
           company={company}
           skill={skill}
           averageGrade={findGradeAverage(grades)}
+          toggleStudentCard={toggleStudentCard}
         />
       );
     });
