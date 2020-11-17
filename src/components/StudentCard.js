@@ -24,7 +24,7 @@ const StudentCard = ({
     grades &&
     grades.map((grade, index) => {
       return (
-        <div className="grade">
+        <div key={index} className="grade">
           <p className="student-card-details-text">
             Test {index + 1}: {grade}%
           </p>
