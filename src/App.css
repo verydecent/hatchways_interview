@@ -121,11 +121,19 @@
 .button {
   border: none;
   background: none;
-  width: 20px;
-  height: 10px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   color: #c7c7c7;
   font-weight: 700;
   font-size: 4rem;
   font-weight: 700;
+}
+
+.button:hover {
+  color: #000000;
+}
+
+.button:focus {
+  color: #000000;
 }
