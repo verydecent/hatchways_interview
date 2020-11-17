@@ -14,6 +14,7 @@ const StudentList = ({ students, searchText }) => {
     filteredStudents &&
     filteredStudents.map((student) => {
       const {
+        id,
         pic,
         firstName,
         lastName,
@@ -24,6 +25,7 @@ const StudentList = ({ students, searchText }) => {
       } = student;
       return (
         <StudentCard
+          id={id}
           pic={pic}
           firstName={firstName}
           lastName={lastName}

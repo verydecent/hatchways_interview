@@ -1,6 +1,7 @@
 import React from "react";
 
 const StudentCard = ({
+  id,
   pic,
   firstName,
   lastName,
@@ -30,7 +31,9 @@ const StudentCard = ({
           </div>
         </div>
       </div>
-      <div className="student-card-bottom-container">Bottom Display None</div>
+      <div className="student-card-bottom-container">
+        <button onClick={() => {}}>Bottom Display None</button>
+      </div>
     </div>
   );
 };
