@@ -4,6 +4,7 @@ import TagContainer from "./TagContainer";
 
 const StudentCard = ({
   // Values
+  tagSearchText,
   isOpen,
   id,
   pic,
@@ -34,8 +35,17 @@ const StudentCard = ({
         </div>
       );
     });
+
   return (
-    <div className="student-card">
+    <div
+      className="student-card"
+      style={{
+        display:
+          tags.includes(tagSearchText) || tagSearchText === ""
+            ? "block"
+            : "none",
+      }}
+    >
       <div className="student-card-container">
         {/* Image Container */}
         <div className="student-card-image-container">

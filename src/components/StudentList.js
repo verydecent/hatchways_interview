@@ -5,11 +5,11 @@ import findGradeAverage from "../helpers/findGradeAverage";
 const StudentList = ({
   students,
   nameSearchText,
+  tagSearchText,
   openStudentCards,
   toggleStudentCard,
   submitTag,
 }) => {
-  // const
   const filteredStudents =
     students &&
     students.filter((student) => {
@@ -18,6 +18,8 @@ const StudentList = ({
     });
 
   const list =
+    // filterTags &&
+    // filterTags.map((student, index) => {
     filteredStudents &&
     filteredStudents.map((student, index) => {
       const {
@@ -37,6 +39,7 @@ const StudentList = ({
           // Key
           key={index}
           // Values
+          tagSearchText={tagSearchText}
           isOpen={openStudentCards.includes(id)}
           id={id}
           pic={pic}

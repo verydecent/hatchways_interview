@@ -80,28 +80,30 @@ class StudentContainer extends React.Component {
     return (
       <div className="App">
         <div className="student-container">
-          <div className="searchbar-container">
-            <SearchBar
-              name="nameSearchText"
-              value={this.state.nameSearchText}
-              placeholder="Search by name"
-              onChange={this.nameOnChange}
-            />
-            <SearchBar
-              name="tagSearchText"
-              value={this.state.tagSearchText}
-              placeholder="Search by tag"
-              onChange={this.tagOnChange}
+          <div className="student-inner-container">
+            <div className="searchbar-container">
+              <SearchBar
+                name="nameSearchText"
+                value={this.state.nameSearchText}
+                placeholder="Search by name"
+                onChange={this.nameOnChange}
+              />
+              <SearchBar
+                name="tagSearchText"
+                value={this.state.tagSearchText}
+                placeholder="Search by tag"
+                onChange={this.tagOnChange}
+              />
+            </div>
+            <StudentList
+              students={this.state.students}
+              nameSearchText={this.state.nameSearchText}
+              tagSearchText={this.state.tagSearchText}
+              toggleStudentCard={this.toggleStudentCard}
+              openStudentCards={this.state.openStudentCards}
+              submitTag={this.submitTag}
             />
           </div>
-          <StudentList
-            students={this.state.students}
-            nameSearchText={this.state.nameSearchText}
-            tagSearchText={this.state.tagSearchText}
-            toggleStudentCard={this.toggleStudentCard}
-            openStudentCards={this.state.openStudentCards}
-            submitTag={this.submitTag}
-          />
         </div>
       </div>
     );
