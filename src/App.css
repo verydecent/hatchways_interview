@@ -54,7 +54,7 @@
 
 .student-card {
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   border-bottom: 1px solid #c7c7c7;
   background-color: #ffffff;
 }
@@ -104,4 +104,8 @@
 .student-card-details-text {
   font-size: 1.8rem;
   color: #c7c7c7;
+}
+
+.student-card-bottom-container {
+  padding: 16px 24px;
 }

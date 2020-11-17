@@ -30,7 +30,7 @@ const StudentCard = ({
           </div>
         </div>
       </div>
-      <div className="student-card-buttom-container">Bottom Display None</div>
+      <div className="student-card-bottom-container">Bottom Display None</div>
     </div>
   );
 };
