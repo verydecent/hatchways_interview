@@ -30,6 +30,10 @@ class StudentContainer extends React.Component {
     this.setState({ [e.target.name]: e.target.value.toLowerCase() });
   };
 
+  submitTag = (e) => {
+    console.log("e", e);
+  };
+
   toggleStudentCard = (id) => {
     if (this.state.openStudentCards.includes(id)) {
       // Remove
@@ -77,6 +81,8 @@ class StudentContainer extends React.Component {
             searchText={this.state.searchText}
             toggleStudentCard={this.toggleStudentCard}
             openStudentCards={this.state.openStudentCards}
+            submitTag={this.submitTag}
+            onChange={this.onChange}
           />
         </div>
       </div>
