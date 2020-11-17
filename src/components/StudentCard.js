@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "./Button";
 import TagContainer from "./TagContainer";
+import StudentDetails from "./StudentDetails";
+import StudentGrades from "./StudentGrades";
 
 const StudentCard = ({
   // Values
@@ -65,18 +67,17 @@ const StudentCard = ({
             </div>
           </div>
           {/* Details section */}
-          <div className="student-card-details-text-container">
-            <p className="student-card-details-text">Email: {email}</p>
-            <p className="student-card-details-text">Company: {company}</p>
-            <p className="student-card-details-text">Skill: {skill}</p>
-            <p className="student-card-details-text">
-              Average: {averageGrade}%
-            </p>
-          </div>
+          <StudentDetails
+            email={email}
+            company={company}
+            skill={skill}
+            averageGrade={averageGrade}
+          />
           {/* Expanding grades section */}
-          <div className={conditionalClassName}>
-            <div className="grades-list">{mappedGrades}</div>
-          </div>
+          <StudentGrades
+            conditionalClassName={conditionalClassName}
+            mappedGrades={mappedGrades}
+          />
           {/* Tags section */}
           <TagContainer id={id} tags={tags} submitTag={submitTag} />
         </div>
