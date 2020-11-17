@@ -14,7 +14,9 @@ const StudentCard = ({
   toggleStudentCard,
 }) => {
   const conditionalSymbol = isOpen ? "-" : "+";
-  const conditionalClassName = "";
+  const conditionalClassName = isOpen
+    ? "student-card-bottom-container show"
+    : "student-card-bottom-container";
 
   return (
     <div className="student-card">
@@ -41,7 +43,7 @@ const StudentCard = ({
           </div>
         </div>
       </div>
-      <div className="student-card-bottom-container">Bottom Display None</div>
+      <div className={conditionalClassName}>Bottom Display None</div>
     </div>
   );
 };

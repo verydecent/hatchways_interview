@@ -108,11 +108,11 @@
 }
 
 .student-card-bottom-container {
-  padding: 16px 24px;
   display: none;
+  padding: 16px 24px;
 }
 
-.student-card-bottom.show {
+.show {
   display: block;
 }
 
