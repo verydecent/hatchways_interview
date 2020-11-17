@@ -4,16 +4,17 @@ import findGradeAverage from "../helpers/findGradeAverage";
 
 const StudentList = ({
   students,
-  searchText,
+  nameSearchText,
   openStudentCards,
   toggleStudentCard,
   submitTag,
 }) => {
+  // const
   const filteredStudents =
     students &&
     students.filter((student) => {
       const fullName = student.firstName + " " + student.lastName;
-      return fullName.toLowerCase().indexOf(searchText) !== -1;
+      return fullName.toLowerCase().indexOf(nameSearchText) !== -1;
     });
 
   const list =

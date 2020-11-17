@@ -7,8 +7,8 @@ class StudentContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      searchText: "",
-      tagText: "",
+      nameSearchText: "",
+      tagSearchText: "",
       students: [],
       openStudentCards: [],
     };
@@ -81,8 +81,8 @@ class StudentContainer extends React.Component {
         <div className="student-container">
           <div className="searchbar-container">
             <SearchBar
-              name="searchText"
-              value={this.state.searchText}
+              name="nameSearchText"
+              value={this.state.nameSearchText}
               placeholder="Search by name"
               onChange={this.onChange}
             />
@@ -95,7 +95,7 @@ class StudentContainer extends React.Component {
           </div>
           <StudentList
             students={this.state.students}
-            searchText={this.state.searchText}
+            nameSearchText={this.state.nameSearchText}
             toggleStudentCard={this.toggleStudentCard}
             openStudentCards={this.state.openStudentCards}
             submitTag={this.submitTag}
