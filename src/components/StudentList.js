@@ -7,6 +7,8 @@ const StudentList = ({
   searchText,
   openStudentCards,
   toggleStudentCard,
+  onChange,
+  submitTag,
 }) => {
   const filteredStudents =
     students &&
@@ -43,6 +45,8 @@ const StudentList = ({
           averageGrade={findGradeAverage(grades)}
           grades={grades}
           toggleStudentCard={toggleStudentCard}
+          onChange={onChange}
+          submitTag={submitTag}
         />
       );
     });
