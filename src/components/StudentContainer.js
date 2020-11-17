@@ -8,6 +8,7 @@ class StudentContainer extends React.Component {
     super();
     this.state = {
       searchText: "",
+      tagText: "",
       students: [],
       openStudentCards: [],
     };
@@ -65,7 +66,9 @@ class StudentContainer extends React.Component {
               onChange={this.onChange}
             />
             <SearchBar
-              searchText={this.state.searchText}
+              name="tagText"
+              value={this.state.tagText}
+              placeholder="Search by tag"
               onChange={this.onChange}
             />
           </div>
