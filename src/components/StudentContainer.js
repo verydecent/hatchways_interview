@@ -55,17 +55,23 @@ class StudentContainer extends React.Component {
 
   render() {
     return (
-      <div className="student-container">
-        <SearchBar
-          searchText={this.state.searchText}
-          onChange={this.onChange}
-        />
-        <StudentList
-          students={this.state.students}
-          searchText={this.state.searchText}
-          toggleStudentCard={this.toggleStudentCard}
-          openStudentCards={this.state.openStudentCards}
-        />
+      <div className="App">
+        <div className="student-container">
+          <SearchBar
+            searchText={this.state.searchText}
+            onChange={this.onChange}
+          />
+          <SearchBar
+            searchText={this.state.searchText}
+            onChange={this.onChange}
+          />
+          <StudentList
+            students={this.state.students}
+            searchText={this.state.searchText}
+            toggleStudentCard={this.toggleStudentCard}
+            openStudentCards={this.state.openStudentCards}
+          />
+        </div>
       </div>
     );
   }
