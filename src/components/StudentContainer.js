@@ -57,14 +57,16 @@ class StudentContainer extends React.Component {
     return (
       <div className="App">
         <div className="student-container">
-          <SearchBar
-            searchText={this.state.searchText}
-            onChange={this.onChange}
-          />
-          <SearchBar
-            searchText={this.state.searchText}
-            onChange={this.onChange}
-          />
+          <div className="searchbar-container">
+            <SearchBar
+              searchText={this.state.searchText}
+              onChange={this.onChange}
+            />
+            <SearchBar
+              searchText={this.state.searchText}
+              onChange={this.onChange}
+            />
+          </div>
           <StudentList
             students={this.state.students}
             searchText={this.state.searchText}

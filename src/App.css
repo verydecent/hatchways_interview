@@ -22,7 +22,15 @@
 
 /* ===== SearchBar.js ===== */
 
+.searchbar-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
 .searchbar {
+  max-height: 54px;
   width: 100%;
   background-color: #ffffff;
   display: flex;
@@ -103,7 +111,6 @@
 .student-card-details-text {
   font-size: 1.8rem;
   line-height: 1.5;
-  color: #c7c7c7;
   margin-top: 4px;
 }
 
@@ -123,7 +130,7 @@
 /* ===== Tags.js ===== */
 
 .tag-section {
-  padding: 6px 0 18px;
+  padding: 20px 0 12px;
   margin-left: 30px;
 }
 
@@ -133,6 +140,7 @@
   border-left: none;
   border-bottom: 1px solid #c7c7c7;
   font-size: 1.8rem;
+  color: #c7c7c7;
 }
 
 .tag-input:focus {
