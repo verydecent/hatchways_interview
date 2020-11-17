@@ -109,11 +109,15 @@
 
 .student-card-bottom-container {
   display: none;
-  padding: 16px 24px;
+  padding: 6px 24px 18px;
 }
 
 .show {
   display: block;
+}
+
+.grades-list {
+  margin-left: 200px;
 }
 
 /* ===== Button.js ===== */

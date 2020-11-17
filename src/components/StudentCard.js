@@ -18,7 +18,17 @@ const StudentCard = ({
   const conditionalClassName = isOpen
     ? "student-card-bottom-container show"
     : "student-card-bottom-container";
-
+  const mappedGrades =
+    grades &&
+    grades.map((grade, index) => {
+      return (
+        <div className="grade">
+          <p className="student-card-details-text">
+            Test {index + 1}: {grade}%
+          </p>
+        </div>
+      );
+    });
   return (
     <div className="student-card">
       <div className="student-card-container">
@@ -40,11 +50,15 @@ const StudentCard = ({
             <p className="student-card-details-text">Email: {email}</p>
             <p className="student-card-details-text">Company: {company}</p>
             <p className="student-card-details-text">Skill: {skill}</p>
-            <p className="student-card-details-text">Average: {averageGrade}</p>
+            <p className="student-card-details-text">
+              Average: {averageGrade}%
+            </p>
           </div>
         </div>
       </div>
-      <div className={conditionalClassName}>Bottom Display None</div>
+      <div className={conditionalClassName}>
+        <div className="grades-list">{mappedGrades}</div>
+      </div>
     </div>
   );
 };
