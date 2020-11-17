@@ -58,6 +58,7 @@ class StudentContainer extends React.Component {
         <StudentList
           students={this.state.students}
           searchText={this.state.searchText}
+          toggleStudentCard={this.toggleStudentCard}
         />
       </div>
     );

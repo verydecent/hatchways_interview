@@ -113,3 +113,7 @@
   padding: 16px 24px;
   display: none;
 }
+
+.student-card-bottom.show {
+  display: block;
+}

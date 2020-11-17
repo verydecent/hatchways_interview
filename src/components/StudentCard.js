@@ -9,6 +9,7 @@ const StudentCard = ({
   company,
   skill,
   averageGrade,
+  toggleStudentCard,
 }) => {
   return (
     <div className="student-card">
@@ -32,7 +33,9 @@ const StudentCard = ({
         </div>
       </div>
       <div className="student-card-bottom-container">
-        <button onClick={() => {}}>Bottom Display None</button>
+        <button onClick={() => toggleStudentCard(id)}>
+          Bottom Display None
+        </button>
       </div>
     </div>
   );
