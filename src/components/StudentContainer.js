@@ -30,7 +30,8 @@ class StudentContainer extends React.Component {
     this.setState({ [e.target.name]: e.target.value.toLowerCase() });
   };
 
-  submitTag = (e) => {
+  submitTag = (e, id, text) => {
+    e.preventDefault();
     console.log("e", e);
   };
 
@@ -82,7 +83,6 @@ class StudentContainer extends React.Component {
             toggleStudentCard={this.toggleStudentCard}
             openStudentCards={this.state.openStudentCards}
             submitTag={this.submitTag}
-            onChange={this.onChange}
           />
         </div>
       </div>

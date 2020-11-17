@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import TagContainer from "./TagContainer";
 
 const StudentCard = ({
   isOpen,
@@ -13,6 +14,7 @@ const StudentCard = ({
   averageGrade,
   grades,
   toggleStudentCard,
+  submitTag,
 }) => {
   const conditionalSymbol = isOpen ? "-" : "+";
   const conditionalClassName = isOpen
@@ -63,9 +65,7 @@ const StudentCard = ({
             <div className="grades-list">{mappedGrades}</div>
           </div>
           {/* Tags section */}
-          <div className="tag-section">
-            <input placeholder="add a tag" className="tag-input" />
-          </div>
+          <TagContainer submitTag={submitTag} />
         </div>
       </div>
     </div>
