@@ -61,18 +61,18 @@
 
 .student-card-container {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
   padding: 16px 24px;
 }
 
 .student-card-image-container {
   height: 100%;
-  width: 25%;
+  width: 22%;
 }
 
 .student-card-image-container img {
-  height: 120px;
-  width: 120px;
   border-radius: 50%;
   border: 1px solid #c7c7c7;
 }
@@ -98,14 +98,18 @@
 }
 
 .student-card-details-text-container {
+  margin-top: 68x;
   margin-left: 30px;
 }
 
 .student-card-details-text {
   font-size: 1.8rem;
+  line-height: 1.5;
   color: #c7c7c7;
+  margin-top: 4px;
 }
 
 .student-card-bottom-container {
   padding: 16px 24px;
+  display: none;
 }
